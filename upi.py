@@ -139,7 +139,7 @@ body, .main {
 }
 </style>
 """,unsafe_allow_html=True)
-GEMINI_API_KEY="AIzaSyBLlTKQaxeXm7DWa5Q1mmSIHBpHyWRdwMA"
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
 genai.configure(api_key=GEMINI_API_KEY)
 with st.sidebar:
     st.header("ℹ️ About this App")
@@ -266,4 +266,5 @@ if uploaded_file is not None:
         else:
             st.error("Could not extract valid JSON answers from AI response. Showing raw output:")
             st.write(response_text)
+
     os.remove(file_path)
